@@ -11,10 +11,10 @@ start
     DF4FRACINC = 31
     DF6FRACINC = 31
 
-    player0x = 25
-    player0y = 55
-    player1x = 125
-    player1y = 55
+    player0x = 24
+    player0y = 25
+
+    dim level = 0
 
     bkcolors:
     $02
@@ -38,30 +38,6 @@ start
     $02
     $02
     $02
-end
-
-    playfield:
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XX..XX....................XX..XX
-    XX..XX....................XX..XX
-    XX..XX..XXXXXX....XXXXXX..XX..XX
-    XX..XX..XXXXXX....XXXXXX..XX..XX
-    XX......XX............XX......XX
-    XX......XX............XX......XX
-    XXXXXXXXXX..XX....XX..XXXXXXXXXX
-    XXXXXXXXXX..XX....XX..XXXXXXXXXX
-    XX......XX............XX......XX
-    XX......XX............XX......XX
-    XX..XX..XXXXXX....XXXXXX..XX..XX
-    XX..XX..XXXXXX....XXXXXX..XX..XX
-    XX..XX....................XX..XX
-    XX..XX....................XX..XX
-    XX..XXXXXXXXXX....XXXXXXXXXX..XX
-    XX..XXXXXXXXXX....XXXXXXXXXX..XX
-    XX......XX............XX......XX
-    XX......XX............XX......XX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 end
 
     pfcolors:
@@ -109,6 +85,17 @@ end
     %00100100
 end
 
+    player2:
+    %00000000
+    %00000000
+    %00000110
+    %00000110
+    %01111110
+    %11111110
+    %01111110
+    %01100110
+end
+
     player0color:
     $9A
     $9A
@@ -131,10 +118,21 @@ end
     $00
 end
 
+    player2color:
+    $12
+    $12
+    $12
+    $12
+    $12
+    $12
+    $12
+    $12
+end
+
 __Main_Menu
     drawscreen
 
-    if switchreset then goto __Main_Loop
+    if switchreset then gosub __Load_Level : goto __Main_Loop
 
     goto __Main_Menu
 
@@ -150,14 +148,39 @@ __Main_Loop
     if joy0left then player0x = player0x - 1
     if joy0right then player0x = player0x + 1
 
-    if joy1up then player1y = player1y - 1
-    if joy1down then player1y = player1y + 1
-    if joy1left then player1x = player1x - 1
-    if joy1right then player1x = player1x + 1
-
     drawscreen
 
     if collision(player0, playfield) then player0x = a : player0y = b
-    if collision(player1, playfield) then player1x = c : player1y = d
 
     goto __Main_Loop
+
+__Load_Level
+    if level = 0 then goto __Level_One
+    return
+
+__Level_One
+
+    playfield:
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XX..XX....................XX..XX
+    XX..XX....................XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
+    XXXXXXXXXX..XX....XX..XXXXXXXXXX
+    XXXXXXXXXX..XX....XX..XXXXXXXXXX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX....................XX..XX
+    XX..XX....................XX..XX
+    XX..XXXXXXXXXX....XXXXXXXXXX..XX
+    XX..XXXXXXXXXX....XXXXXXXXXX..XX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+end
+    return
