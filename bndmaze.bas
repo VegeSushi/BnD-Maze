@@ -43,24 +43,24 @@ end
     playfield:
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XX..XX......................XXXX
-    XX..XX......................XXXX
-    XX..XX..XXXXXXXXXXXXXX..XXXXXXXX
-    XX..XX..XXXXXXXXXXXXXX..XXXXXXXX
-    XX..............XX............XX
-    XX..............XX............XX
-    XXXXXXXXXXXXXX..XX..XXXXXXXXXXXX
-    XXXXXXXXXXXXXX..XX..XXXXXXXXXXXX
-    XX......XX......XX..XX......XXXX
-    XX......XX......XX..XX......XXXX
-    XX..XX..XX..XXXXXX..XX..XXXXXXXX
-    XX..XX..XX..XXXXXX..XX..XXXXXXXX
-    XX..XX..............XX......XXXX
-    XX..XX..............XX......XXXX
-    XX..XXXXXXXXXXXXXXXXXXXXXX..XXXX
-    XX..XXXXXXXXXXXXXXXXXXXXXX..XXXX
-    XX..............XX..........XXXX
-    XX..............XX..........XXXX
+    XX..XX....................XX..XX
+    XX..XX....................XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
+    XXXXXXXXXX..XX....XX..XXXXXXXXXX
+    XXXXXXXXXX..XX....XX..XXXXXXXXXX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX..XXXXXX....XXXXXX..XX..XX
+    XX..XX....................XX..XX
+    XX..XX....................XX..XX
+    XX..XXXXXXXXXX....XXXXXXXXXX..XX
+    XX..XXXXXXXXXX....XXXXXXXXXX..XX
+    XX......XX............XX......XX
+    XX......XX............XX......XX
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 end
 
