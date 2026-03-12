@@ -66,26 +66,25 @@ end
 
     pfcolors:
     $C4
-    $C4
-    $C8
     $C8
     $C4
-    $C4
-    $C8
     $C8
     $C4
-    $C4
-    $C8
     $C8
     $C4
-    $C4
-    $C8
     $C8
     $C4
-    $C4
-    $C8
     $C8
     $C4
+    $C8
+    $C4
+    $C8
+    $C4
+    $C8
+    $C4
+    $C8
+    $C4
+    $C8
 end
 
     player0:
