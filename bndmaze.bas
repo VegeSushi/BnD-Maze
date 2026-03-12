@@ -131,6 +131,13 @@ end
     $00
 end
 
+__Main_Menu
+    drawscreen
+
+    if switchreset then goto __Main_Loop
+
+    goto __Main_Menu
+
 __Main_Loop
 
     a = player0x
