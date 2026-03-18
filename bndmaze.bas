@@ -165,6 +165,8 @@ __Main_Loop
 
     if collision(player0, playfield) then player0x = a : player0y = b
     if collision(player1, playfield) then player1x = c : player1y = d
+    if collision(player0, missile1) then score = score + 10
+    if collision(player1, missile0) then score = score - 10
     if collision(missile0, playfield) then missile0y = 255 : shooting = 0
     if collision(missile1, playfield) then missile1y = 255 : shootingt = 0
 
